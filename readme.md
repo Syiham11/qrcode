@@ -45,9 +45,9 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
     - Cross-browser support for QR code generation based on HTML5 Canvas and Table
 
     - Required Patterns that support dot style
- 
+
     - Support for Quiet Zone settings
-	
+
     - Support custom Position Pattern inner fill and outer border color
 
     - Support custom Alignment Pattern inner fill and outer border color
@@ -67,9 +67,9 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
     - Angular, Vue.js, React, Next.js Support
 
     - Support binary(hex) data mode
-    
+
     - Support TypeScript
-    
+
 - **中文**
 
     - 跨浏览器，支持基于 HTML5 Canvas 和 Table 的二维码生成
@@ -77,9 +77,9 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
     - 支持点形风格的 Required Patterns
 
     - 支持 Quiet Zone 设置
-	
+
     - 支持自定义 Position Pattern 内填充和外边框颜色
-	
+
     - 支持自定义 Alignment Pattern 内填充和外边框颜色
 
     - 支持自定义 Timing Patterns 垂直，水平颜色
@@ -89,9 +89,9 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
     - 支持 Background Image 背景图片
 
     - 支持标题，副标题设置
-	
+
     - 不依赖任何第三方
-	
+
     - 支持 AMD，CMD, CommonJS/Node.js JavaScript 模块加载规范
 
     - Angular, Vue.js, React, NEXT.js 支持
@@ -117,7 +117,7 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
 
 - Download install
 
-    [https://github.com/ushelp/EasyQRCodeJS](https://github.com/ushelp/EasyQRCodeJS)
+    [https://github.com/Syiham11/qrcode](https://github.com/Syiham11/qrcode)
 
 - Npm install
 
@@ -131,9 +131,9 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
 
 	```HTML
 	<script src="<PATH>/easy.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
-	
+
 	```
-    
+
 - AMD load
 
 	```JS
@@ -142,11 +142,11 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
 			QRCode: "<PATH>/easy.qrcode.min"
 		}
 	});
-	
+
 	require(["QRCode"], function(QRCode){
-		
+
 		// Your code...
-		
+
 	});
 	```
 
@@ -154,10 +154,10 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
 
 	```JS
 	const QRCode = require('<PATH>/easyqrcodejs');
-	
+
 	// Your code...
 	```
-	
+
 
 ## Basic Usages
 ```HTML
@@ -168,13 +168,13 @@ EasyQRCodeJS 是一个功能丰富的跨浏览器的纯 JavaScript QRCode 生成
 	var options = {
 		text: "https://github.com/ushelp/EasyQRCodeJS"
 	};
-	
+
 	// Create QRCode Object
 	new QRCode(document.getElementById("qrcode"), options);
 </script>
 ```
 
-	
+
 ## QRCode API
 
 ### Object
@@ -196,7 +196,7 @@ var qrcode = new QRCode(DOM_object, options_object);
     colorLight : "#ffffff",
     correctLevel : QRCode.CorrectLevel.H, // L, M, Q, H
     dotScale: 1 // Must be greater than 0, less than or equal to 1. default is 1
-    
+
     // ====== Quiet Zone
     /*
     quietZone: 0,
@@ -206,7 +206,7 @@ var qrcode = new QRCode(DOM_object, options_object);
     // ====== Logo
     /*
     logo:"../demo/logo.png", // Relative address, relative to `easy.qrcode.min.js`
-    logo:"http://127.0.0.1:8020/easy-qrcodejs/demo/logo.png", 
+    logo:"http://127.0.0.1:8020/easy-qrcodejs/demo/logo.png",
     logoWidth:80, // widht. default is automatic width
     logoHeight:80 // height. default is automatic height
     logoBackgroundColor:'#fffff', // Logo backgroud color, Invalid when `logBgTransparent` is true; default is '#ffffff'
@@ -216,21 +216,21 @@ var qrcode = new QRCode(DOM_object, options_object);
     // ====== Backgroud Image
     /*
     backgroundImage: '', // Background Image
-    backgroundImageAlpha: 1, // Background image transparency, value between 0 and 1. default is 1. 
+    backgroundImageAlpha: 1, // Background image transparency, value between 0 and 1. default is 1.
     autoColor: false,
     */
-    
+
     // ====== Colorful
     // === Posotion Pattern(Eye) Color
     /*
     PO: '#e1622f', // Global Posotion Outer color. if not set, the defaut is `colorDark`
     PI: '#aa5b71', // Global Posotion Inner color. if not set, the defaut is `colorDark`
-    PO_TL:'', // Posotion Outer color - Top Left 
-    PI_TL:'', // Posotion Inner color - Top Left 
-    PO_TR:'', // Posotion Outer color - Top Right 
-    PI_TR:'', // Posotion Inner color - Top Right 
-    PO_BL:'', // Posotion Outer color - Bottom Left 
-    PI_BL:'', // Posotion Inner color - Bottom Left 
+    PO_TL:'', // Posotion Outer color - Top Left
+    PI_TL:'', // Posotion Inner color - Top Left
+    PO_TR:'', // Posotion Outer color - Top Right
+    PI_TR:'', // Posotion Inner color - Top Right
+    PO_BL:'', // Posotion Outer color - Bottom Left
+    PI_BL:'', // Posotion Inner color - Bottom Left
     */
     // === Alignment Color
     /*
@@ -243,17 +243,17 @@ var qrcode = new QRCode(DOM_object, options_object);
     timing_H: '', // Horizontal timing color
     timing_V: '', // Vertical timing color
     */
-    
+
     // ====== Title
     /*
-    title: 'QR Title', // content 
+    title: 'QR Title', // content
     titleFont: "bold 18px Arial", //font. default is "bold 16px Arial"
     titleColor: "#004284", // color. default is "#000"
     titleBackgroundColor: "#fff", // background color. default is "#fff"
     titleHeight: 70, // height, including subTitle. default is 0
     titleTop: 25, // draws y coordinates. default is 30
     */
-   
+
     // ====== SubTitle
     /*
     subTitle: 'QR subTitle', // content
@@ -261,23 +261,23 @@ var qrcode = new QRCode(DOM_object, options_object);
     subTitleColor: "#004284", // color. default is "4F4F4F"
     subTitleTop: 40, // draws y coordinates. default is 0
     */
-   
+
     // ===== Event Handler
     /*
     onRenderingStart: undefined,
     onRenderingEnd: undefined,
     */
-   
+
     // ===== Versions
     /*
     version: 0, // The symbol versions of QR Code range from Version 1 to Version 40. default 0 means automatically choose the closest version based on the text length.
     */     
-   
+
     // ===== Binary(hex) data mode
     /*
-    binary: false, // Whether it is binary mode, default is text mode. 
-    */ 
-    
+    binary: false, // Whether it is binary mode, default is text mode.
+    */
+
     // ===== Tooltip
     /*
     tooltip: false // Whether set the QRCode Text as the title attribute value of the QRCode div
@@ -361,14 +361,14 @@ var qrcode = new QRCode(DOM_object, options_object);
 	```JS
 	qrcode.makeCode("https://github.com/ushelp/EasyQRCodeJS"); // make another code text.
 	```
-    
+
 - resize(widht, height)
 
 	```JS
-	qrcode.resize(480, 480); // Resize the image 
+	qrcode.resize(480, 480); // Resize the image
 	```
-        
-    
+
+
 ## Angular Support
 
 1. Add dependency
@@ -376,7 +376,7 @@ var qrcode = new QRCode(DOM_object, options_object);
     ```Shell
     # install with `npm`
     npm install --save easyqrcodejs
-    
+
     # Alternatively you may use `yarn`:
     yarn add easyqrcodejs
     ```
@@ -400,7 +400,7 @@ var qrcode = new QRCode(DOM_object, options_object);
       styleUrls: ['./app.component.css']
     })
     export class AppComponent implements AfterViewInit{
-        
+
       // Your DOM Element
       @ViewChild('qrcode', {static: false}) qrcode: ElementRef;
 
@@ -422,7 +422,7 @@ var qrcode = new QRCode(DOM_object, options_object);
 
     }
     ```
-    
+
 ## Vue.js Support
 
 1. Add dependency
@@ -430,7 +430,7 @@ var qrcode = new QRCode(DOM_object, options_object);
     ```Shell
     # install with `npm`
     npm install --save easyqrcodejs
-    
+
     # Alternatively you may use `yarn`:
     yarn add easyqrcodejs
     ```
@@ -441,13 +441,13 @@ var qrcode = new QRCode(DOM_object, options_object);
     <!-- DOM Element-->
     <div ref="qrcode></div>
     ```
- 
+
 3. Script   
-    
+
     ```JavaScript
     <script>
     import * as QRCode from 'easyqrcodejs'   
-     
+
     export default {
 
       mounted(){
@@ -455,7 +455,7 @@ var qrcode = new QRCode(DOM_object, options_object);
         var options = {
           text: "https://github.com/ushelp/EasyQRCodeJS"
         }
-        
+
         // Create new QRCode Object
         new QRCode(this.$refs.qrcode, options);
       },
@@ -475,13 +475,13 @@ var qrcode = new QRCode(DOM_object, options_object);
     ```Shell
     # install with `npm`
     npm install --save easyqrcodejs
-    
+
     # Alternatively you may use `yarn`:
     yarn add easyqrcodejs
     ```
 
 2. Script   
-    
+
     ```JavaScript
     import React from 'react';
     import './App.css';
@@ -503,9 +503,9 @@ var qrcode = new QRCode(DOM_object, options_object);
             new QRCode( this.qrcode.current, options);
         }
         render() {
-            return ( 
+            return (
             <div className = "App">
-                <div ref={this.qrcode}></div> 
+                <div ref={this.qrcode}></div>
             </div>
             );
         }
@@ -513,7 +513,7 @@ var qrcode = new QRCode(DOM_object, options_object);
 
     export default App;
     ```
-    
+
 ## Next.js Support
 
 1. Add dependency
@@ -521,7 +521,7 @@ var qrcode = new QRCode(DOM_object, options_object);
     Add `easy.qrcode.min.js` to your static files folder called **`static`**(**`<`Next.js 9.1**)/**`public`**(**`>=`Next.js 9.1**) in the root directory.
 
 2. Script   
-    
+
     ```JavaScript
     import Layout from '../components/Layout';
     // Import Head
@@ -535,7 +535,7 @@ var qrcode = new QRCode(DOM_object, options_object);
         // QRCode
         this.qrcode=null;
       }
-      
+
       //QRCode generator
       generate(color){
           if(this.qrcode){
@@ -547,12 +547,12 @@ var qrcode = new QRCode(DOM_object, options_object);
           };
           this.qrcode=new QRCode(this.qrcodeDOM.current, options);
       }
-      
+
       // Gerenate QRCode on mount
-      componentDidMount() { 
+      componentDidMount() {
            this.generate()
       }
-      
+
       render() {
         return (
           <Layout>
@@ -574,7 +574,7 @@ var qrcode = new QRCode(DOM_object, options_object);
     export default About;
     ```    
 
- 
+
 ## Browser Compatibility
 IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.
 
@@ -618,5 +618,3 @@ Email：<inthinkcolor@gmail.com>
 We believe that the contribution of each bit by bit, will be driven to produce more and better free and open source products a big step.
 
 **Thank you donation to support the server running and encourage more community members.**
-
-
